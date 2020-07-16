@@ -1,0 +1,193 @@
+                        JS ASSIGNMENT DAY-2
+
+((((1)))JavaScript | console.log() with Examples
+
+The console.log() is a function in JavaScript which is used to print any kind of variables defined before in it or to just print any message that needs to be displayed to the user.
+
+Syntax:
+
+console.log(A);
+Parameters: It accepts a parameter which can be an array, an object or any message.
+Return value: It returns the value of the parameter given.
+JavaScript codes to show the working of this function:
+
+1) Passing a number as an argument: If the number is passed to the function console.log() then the function will display it.
+Code #1:
+
+filter_none
+edit
+play_arrow
+
+brightness_4
+<script> 
+var a = 2; 
+console.log(a); 
+</script> 
+
+
+2) Passing a string as an argument: If the string is passed to the function console.log(), then the function will display it.
+Code #2:
+
+
+
+
+filter_none
+edit
+play_arrow
+
+brightness_4
+<script> 
+var str = "GeeksforGeeks"; 
+console.log(str); 
+</script> 
+
+
+
+4) Passing a message as an argument: If the message is passed to the function console.log(), then the function will display the given message.
+Code #4:
+
+filter_none
+edit
+play_arrow
+
+brightness_4
+<script> 
+console.log("GeeksforGeeks"); 
+</script> 
+
+
+5) Passing a function as an argument: If the function is passed to the function console.log(), then the function will display the value of the passed function().
+Code #5:
+
+filter_none
+edit
+play_arrow
+
+brightness_4
+<script> 
+function func() { return (5 * 19); } 
+console.log(func()); 
+</script> 
+
+
+6) Passing a number with message as an argument: If the number is passed to the function console.log(), then the function will display it along with the given message.
+Code #6:
+
+filter_none
+edit
+play_arrow
+
+brightness_4
+<script> 
+var a = 2; 
+console.log("The value of a is " + a); 
+</script> 
+
+
+
+
+
+
+
+
+
+(((2)))))Array methods
+
+
+
+Arrays provide a lot of methods. To make things easier, in this chapter they are split into groups.
+
+Add/remove items
+We already know methods that add and remove items from the beginning or the end:
+
+arr.push(...items) – adds items to the end,
+arr.pop() – extracts an item from the end,
+arr.shift() – extracts an item from the beginning,
+arr.unshift(...items) – adds items to the beginning.
+Here are a few others.
+
+splice
+How to delete an element from the array?
+
+The arrays are objects, so we can try to use delete:
+
+let arr = ["I", "go", "home"];
+
+delete arr[1]; // remove "go"
+
+alert( arr[1] ); // undefined
+
+// now arr = ["I",  , "home"];
+alert( arr.length ); // 3
+The element was removed, but the array still has 3 elements, we can see that arr.length == 3.
+
+That’s natural, because delete obj.key removes a value by the key. It’s all it does. Fine for objects. But for arrays we usually want the rest of elements to shift and occupy the freed place. We expect to have a shorter array now.
+
+So, special methods should be used.
+
+The arr.splice(start) method is a swiss army knife for arrays. It can do everything: insert, remove and replace elements.
+
+The syntax is:
+
+arr.splice(index[, deleteCount, elem1, ..., elemN])
+It starts from the position index: removes deleteCount elements and then inserts elem1, ..., elemN at their place. Returns the array of removed elements.
+
+This method is easy to grasp by examples.
+
+Let’s start with the deletion:
+
+
+
+
+let arr = ["I", "study", "JavaScript"];
+
+arr.splice(1, 1); // from index 1 remove 1 element
+
+alert( arr ); // ["I", "JavaScript"]
+Easy, right? Starting from the index 1 it removed 1 element.
+
+In the next example we remove 3 elements and replace them with the other two:
+
+
+
+
+
+
+                                                                           let arr = ["I", "study", "JavaScript", "right", "now"];
+
+// remove 3 first elements and replace them with another
+arr.splice(0, 3, "Let's", "dance");
+
+alert( arr ) // now ["Let's", "dance", "right", "now"]
+Here we can see that splice returns the array of removed elements:
+
+                        let arr = ["I", "study", "JavaScript", "right", "now"];
+
+// remove 2 first elements
+let removed = arr.splice(0, 2);
+
+alert( removed ); // "I", "study" <-- array of removed elements
+The splice method is also able to insert the elements without any removals. For that we need to set deleteCount to 0:
+
+let arr = ["I", "study", "JavaScript"];
+
+// from index 2
+// delete 0
+// then insert "complex" and "language"
+arr.splice(2, 0, "complex", "language");
+
+alert( arr ); // "I", "study", "complex", "language", "JavaScript"
+
+3) Passing a char as an argument: If the char is passed to the function console.log(), then the function will display it.
+Code #3:
+
+filter_none
+edit
+play_arrow
+
+brightness_4
+<script> 
+var ch = '2'; 
+console.log(ch); 
+</script> 
+
